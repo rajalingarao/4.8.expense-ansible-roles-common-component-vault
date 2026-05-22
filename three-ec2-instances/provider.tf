@@ -2,12 +2,12 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.48.0"
+      version = ">= 6.37.0"
     }
   }
 
 backend "s3" {
-  bucket = "ansible-tf-remote-state"
+  bucket = "linga-devops-rs"
   key = "three-ec2-instances-roles-common-com-vault"
   region = "us-east-1"
   #dynamodb_table = "roboshop13-locking"
